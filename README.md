@@ -8,15 +8,19 @@ Installation
 * Install [powerlevel 10k](https://github.com/romkatv/powerlevel10k#oh-my-zsh)
 * Install [fuzzy search finder](https://github.com/junegunn/fzf#using-linux-package-managers)
 
-Then adapt the `.zshrc` to your system. 
-The provided one is for macOS so you'll need to follow the instructions of each plugin to tweak it for other systems. 
+Then adapt the [.zshrc](.zshrc) to your system. 
+Ideally, follow the instructions for each plugin and much of the `.zshrc` will create itself. 
+
+e.g. this line 
+`[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh`
+comes from the fzf installer. 
+
+
 
 
 ## Ruby
 
 I know I'm going to screw this up in the future so here's a note to my future self. 
-
-Dear sciencectn, 
 
 You know how `conda` is nice? 
 And you know how `homebrew` is annoying about installing newer Python or Ruby versions than the ones provided by macOS? 
