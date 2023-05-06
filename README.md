@@ -1,5 +1,9 @@
 # dotfiles
 
+
+*Devs are tool-using animals. Without shell plugins they are nothing, with tons of shell plugins they are everything and also why is my prompt loading so slowly.* -Thomas Carlyle, probably. 
+
+
 Installation
 * Install zsh
 * Install [oh-my-zsh](https://ohmyz.sh/#install)
