@@ -3,6 +3,7 @@
 
 *Devs are tool-using animals. Without shell plugins they are nothing, with tons of shell plugins they are everything and also why is my prompt loading so slowly.* -Thomas Carlyle, probably. 
 
+## Z shell
 
 Installation
 * Install zsh
@@ -20,8 +21,6 @@ e.g. this line
 comes from the fzf installer. 
 
 
-
-
 ## Ruby
 
 I know I'm going to screw this up in the future so here's a note to my future self. 
@@ -32,4 +31,8 @@ Uses [rbenv](https://github.com/rbenv/rbenv) to manage your Ruby installations.
 
 Make sure to run `rbenv init` to set up your shell. 
 
+## Windows
 
+* Install [Zlocation](https://github.com/vors/ZLocation)
+* Install [Powershell Git Aliases](https://github.com/gluons/powershell-git-aliases)
+* Edit `$profile` in a Powershell Window and paste the contents of [profile.ps1](profile.ps1)
