@@ -33,6 +33,14 @@ Make sure to run `rbenv init` to set up your shell.
 
 ## Windows
 
+[Update Powershell to at least 7.0](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4#install-powershell-using-winget-recommended)
+```
+winget install Microsoft.Powershell
+```
+Then: 
+
+* Make sure [Windows Terminal](https://apps.microsoft.com/detail/9n0dx20hk701?rtc=1&hl=en-us&gl=US) runs `pwsh.exe` in its profile (which is `PATH`'d to 7.0) instead of the default `%windir%\System32\WindowsPowerShell\v1.0\powershell.exe` which runs 5.0
+  * Run `$PSVersionTable` to check the version
 * Install [Zlocation](https://github.com/vors/ZLocation)
 * Install [Powershell Git Aliases](https://github.com/gluons/powershell-git-aliases)
 * Edit `$profile` in a Powershell Window and paste the contents of [profile.ps1](profile.ps1)
