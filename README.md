@@ -11,7 +11,11 @@ Installation
 * Install [autojump](https://github.com/wting/autojump)
 * Install [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 * Install [powerlevel 10k](https://github.com/romkatv/powerlevel10k#oh-my-zsh)
-* Install [fuzzy search finder](https://github.com/junegunn/fzf#using-linux-package-managers)
+* Install [fuzzy search finder](https://github.com/junegunn/fzf?tab=readme-ov-file#using-git). Using Git is preferred
+```bash
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+```
 
 Then adapt the [.zshrc](.zshrc) to your system. 
 Ideally, follow the instructions for each plugin and much of the `.zshrc` will create itself. 
