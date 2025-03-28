@@ -78,7 +78,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
     autojump
     colored-man-pages
-    colorize # need pip install Pygments
     command-not-found
     copyfile
     copypath
@@ -86,8 +85,7 @@ plugins=(
     extract
     git
     git-auto-fetch
-    macos
-    rsync
+    ubuntu
     zsh-autosuggestions
 )
 
