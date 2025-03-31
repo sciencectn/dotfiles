@@ -1,0 +1,15 @@
+
+plugins=(
+    autojump
+    colored-man-pages
+    command-not-found
+    copyfile
+    copypath
+    dirhistory
+    extract
+    git
+    git-auto-fetch
+    ubuntu
+    zsh-autosuggestions
+)
+
