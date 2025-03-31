@@ -2,7 +2,7 @@
 
 set -e
 
-sudo apt -y install zsh
+sudo apt -y install zsh xsel xclip
 
 # Oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -20,3 +20,5 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 # Power level 10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 
+# Copy tmux conf
+cp .tmux.conf ~/.tmux.conf
