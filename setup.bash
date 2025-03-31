@@ -17,6 +17,8 @@ add_source_to_rc() {
     } >> "${HOME}/.zshrc"
 }
 
+sudo apt -y install zsh
+
 # Oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
