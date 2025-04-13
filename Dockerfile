@@ -11,6 +11,10 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get --yes --no-install-recommends install
 
 COPY . /root/dotfiles/
 
+WORKDIR /root/dotfiles
+
 RUN /root/dotfiles/setup.bash
+
+WORKDIR /root
 
 ENTRYPOINT [ "/bin/zsh" ]
