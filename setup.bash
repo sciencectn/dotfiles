@@ -2,13 +2,17 @@
 
 set -e
 
-sudo apt -y install zsh xsel xclip
+sudo apt -y install \
+    autojump \
+    curl \
+    git \
+    tmux \
+    xclip \
+    xsel \
+    zsh
 
 # Oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-# autojump
-sudo apt -y install autojump
 
 # zsh autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}"/plugins/zsh-autosuggestions
