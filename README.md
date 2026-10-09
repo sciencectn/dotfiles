@@ -6,6 +6,7 @@
 ## Z shell
 
 Works on macOS (requires [Homebrew](https://brew.sh)) and Ubuntu.
+It *should* be idempotent.
 
 ```
 ./setup.bash
@@ -20,15 +21,15 @@ This will:
 * Install [fuzzy search finder](https://github.com/junegunn/fzf?tab=readme-ov-file#using-git)
 * Copy `.tmux.conf` and, if your existing `~/.zshrc` is untouched, `.zshrc`
 
-The oh-my-zsh plugin list is picked per OS from [plugins-mac.txt](./plugins-mac.txt)
-or [plugins-ubuntu.txt](./plugins-ubuntu.txt) and written to `~/.zshrc.d/plugins.zsh`.
-`~/.zshrc` sources every `~/.zshrc.d/*.zsh` before loading oh-my-zsh, so put
-machine-specific config (PATH tweaks, secrets, aliases) in `~/.zshrc.d/local.zsh`
-and it will survive re-running the script.
+Your oh-my-zsh plugins come from:
+* Ubuntu: [plugins-ubuntu.txt](./plugins-ubuntu.txt)
+* macOS: [plugins-mac.txt](./plugins-mac.txt)
+
+This `setup.bash` manages `~/.zshrc`, so put your secret sauce into 
+something like `~/.zshrc.d/local.zsh`. 
+Anything in `~/.zshrc.d/*.zsh` gets sourced. 
 
 Powerlevel10k runs `p10k configure` on first start to create `~/.p10k.zsh`.
-
-The script is safe to re-run; already-installed pieces are skipped.
 
 ## Ruby
 
