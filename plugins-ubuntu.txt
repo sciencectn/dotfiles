@@ -5,7 +5,6 @@ plugins=(
     command-not-found
     copyfile
     copypath
-    dirhistory
     extract
     git
     git-auto-fetch

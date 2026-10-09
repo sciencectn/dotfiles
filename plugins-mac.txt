@@ -1,0 +1,9 @@
+plugins=(
+  autojump
+  copyfile
+  git
+  git-auto-fetch
+  zsh-autosuggestions
+  copypath
+  macos
+)

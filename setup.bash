@@ -2,6 +2,8 @@
 
 set -e
 
+# TODO switch to brew if on macos, and only install necessary dependencies
+# brew is a required dependency, fail if not installed
 sudo apt -y install \
     autojump \
     curl \
@@ -26,3 +28,6 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-
 
 # Copy tmux conf
 cp .tmux.conf ~/.tmux.conf
+
+# TODO copy .zshrc but only if it appears there is a vanilla zshrc that this script hasn't touched yet
+# consider using .d directories
