@@ -1,3 +1,6 @@
+# Managed by sciencectn/dotfiles
+# Machine-specific config belongs in ~/.zshrc.d/*.zsh, not here.
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -9,21 +12,12 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# TODO use one of the txt files
-plugins=(
-    autojump
-    colored-man-pages
-    command-not-found
-    copyfile
-    copypath
-    dirhistory
-    extract
-    git
-    git-auto-fetch
-    ubuntu
-    zsh-autosuggestions
-)
-
+# Sourced before oh-my-zsh loads so these files can set plugins=(...) and
+# adjust PATH. setup.bash writes plugins.zsh from plugins-<os>.txt; add your
+# own files (e.g. local.zsh) for machine-specific config.
+for f in "$HOME"/.zshrc.d/*.zsh(N); do
+  source "$f"
+done
 
 source $ZSH/oh-my-zsh.sh
 

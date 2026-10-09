@@ -5,21 +5,30 @@
 
 ## Z shell
 
-Installation
+Works on macOS (requires [Homebrew](https://brew.sh)) and Ubuntu.
 
 ```
 ./setup.bash
 ```
 
-This will: 
-* Install zsh
+This will:
+* Install zsh and tmux (plus clipboard tools on Ubuntu)
 * Install [oh-my-zsh](https://ohmyz.sh/#install)
 * Install [autojump](https://github.com/wting/autojump)
 * Install [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 * Install [powerlevel 10k](https://github.com/romkatv/powerlevel10k#oh-my-zsh)
 * Install [fuzzy search finder](https://github.com/junegunn/fzf?tab=readme-ov-file#using-git)
+* Copy `.tmux.conf` and, if your existing `~/.zshrc` is untouched, `.zshrc`
 
-Then edit `~/.zshrc` and change `plugins=(...)` to what is in [plugins.txt](./plugins.txt)
+The oh-my-zsh plugin list is picked per OS from [plugins-mac.txt](./plugins-mac.txt)
+or [plugins-ubuntu.txt](./plugins-ubuntu.txt) and written to `~/.zshrc.d/plugins.zsh`.
+`~/.zshrc` sources every `~/.zshrc.d/*.zsh` before loading oh-my-zsh, so put
+machine-specific config (PATH tweaks, secrets, aliases) in `~/.zshrc.d/local.zsh`
+and it will survive re-running the script.
+
+Powerlevel10k runs `p10k configure` on first start to create `~/.p10k.zsh`.
+
+The script is safe to re-run; already-installed pieces are skipped.
 
 ## Ruby
 
