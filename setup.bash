@@ -87,6 +87,10 @@ cp .tmux.conf "$HOME/.tmux.conf"
 mkdir -p "$HOME/.zshrc.d"
 cp "plugins-${DOTFILES_OS}.txt" "$HOME/.zshrc.d/plugins.zsh"
 
+if [[ "${DOTFILES_OS}" == "mac" ]]; then
+    cp -v sublime-mac.zsh "$HOME/.zshrc.d/"
+fi
+
 # ~/.zshrc: only install ours if the existing one is "vanilla", i.e. missing,
 # already ours (marker line), or the untouched oh-my-zsh template.
 ZSHRC_MARKER='# Managed by sciencectn/dotfiles'
